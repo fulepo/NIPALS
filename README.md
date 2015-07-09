@@ -1,0 +1,2 @@
+# NIPALS
+Multivariate Data Analysis
