@@ -33,5 +33,5 @@ ANALYSIS OF RESIDUALS
 
 At the end of NIPALS decomposition of the data matrix X, statistical 
 evaluation of the residual matrix is performed by the function 'matrix_stat'
-available in the repository.
-Type: help matrix_stat for further infos. 
+available in the repository. 
+residuals is 
