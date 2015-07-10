@@ -5,7 +5,8 @@ Functions to perform principal components analysis by NIPALS decomposition of a 
 
 The functions are written to run under MATLAB 2015a.
 To run the function it is necessary also the "scaledata.m" function. It is available
-in the present repository but it can also be found on MatlabExchange (developed by Ani).
+in the present repository but it can also be found on MatlabExchange (developed by Ani) 
+downloadable at: http://www.mathworks.com/matlabcentral/fileexchange/submissions/15561/v/1/download/m
 
 RECOMMENDATIONS ON DATA PREPARATION
 
