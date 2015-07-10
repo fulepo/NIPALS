@@ -1,5 +1,7 @@
 function RESULTS = nipals(X, prepro, a, it, tol)
 
+% Written by: Filippo Amato July 2015
+
 % Submit data matrix in the form of a TABLE. This form is
 % prefearable. 
 % Objects on the ROWS and variables on the COLUMNS.
