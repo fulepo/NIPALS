@@ -4,6 +4,8 @@ Multivariate Data Analysis
 Functions to perform principal components analysis by NIPALS decomposition of a data matrix are given.
 
 The functions are written to run under MATLAB 2015a.
+To run the function it is necessary also the "scaledata.m" function. It is available
+in the present repository but it can also be found on MatlabExchange (developed by Ani).
 
 RECOMMENDATIONS ON DATA PREPARATION
 
