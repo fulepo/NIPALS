@@ -40,3 +40,9 @@ figure
 %          'HorizontalAlignment','left')
      title('Biplot - data scaled in [-1,1]')
     axis([-1.2 1.2 -1.2 1.2]);
+    
+figure
+    plot(RESULTS.Residual_Matrix, '*')
+    title('RESIDUALS')
+    xlabel('Row index')
+    ylabel('Residual')
