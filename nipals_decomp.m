@@ -41,6 +41,10 @@ for h=1:a
    
 end
 
+% RESIDUAL MATRIX
+RESULTS.Residual_matrix = Z;
+% STATISTICS ON RESIDUAL MATRIX
+RESULTS.Residual_Matrix_Stat = matrix_stat(Z);
   
 
 
