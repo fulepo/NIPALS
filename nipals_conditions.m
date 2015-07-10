@@ -2,11 +2,11 @@
 
 if nargin == 1
     prepro = 0;
-    a = cols;
+    a = min(rows,cols);
     it = 20000;
     tol = 1e-5;
 elseif nargin == 2
-    a = cols;
+    a = min(rows,cols);
     it = 20000;
     tol = 1e-5;
 elseif nargin == 3
