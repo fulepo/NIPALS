@@ -45,6 +45,9 @@ end
 RESULTS.Residual_Matrix = Z;
 % STATISTICS ON RESIDUAL MATRIX
 RESULTS.Residual_Matrix_Stat = matrix_stat(Z);
+
+RESULTS.Scores_Scaled = scaledata(RESULTS.Scores,-1,1);
+RESULTS.Loadings_Scaled = scaledata(RESULTS.Loadings,-1,1);
   
 
 
