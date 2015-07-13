@@ -44,6 +44,7 @@ ExistTable = istable(X);
 if ExistTable==1
     TABLE = X;
     X = table2array(X);
+    [a,LargeX] = max(std(X));
 end
 
 [rows, cols] = size(X);
@@ -52,7 +53,7 @@ Z = X;
 run('nipals_conditions.m')
 run('nipals_prepro.m')
     
-RESULTS = nipals_decomp(Z,rows, cols, a, it, tol)
+RESULTS = nipals_decomp(Z,rows, cols, a, it, tol, LargeX);
 
 if ExistTable == 1
     run('nipals_figures.m')

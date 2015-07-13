@@ -1,4 +1,4 @@
-function RESULTS = nipals_decomp(Z,rows, cols, a, it, tol)
+function RESULTS = nipals_decomp(Z,rows, cols, a, it, tol, LargeX)
 
 % EIGENVALUES
 
@@ -14,7 +14,7 @@ nr = 0;
 % NIPALS DECOMPOSITION
 
 for h=1:a
-   th = Z(:,1);
+   th = Z(:,LargeX);
    ende = false;
    
    while(~ende)
