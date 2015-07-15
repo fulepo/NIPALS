@@ -1,5 +1,8 @@
 function RESULTS = nipals(X, prepro, a, it, tol)
 
+% This function requires the function scaledata.m available at:
+% http://www.mathworks.com/matlabcentral/fileexchange/15561-data-scaling
+%
 % Written by: Filippo Amato July 2015
 % 
 %   RESULTS = nipals(X, prepro, a, it, tol)
