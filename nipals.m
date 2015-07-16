@@ -1,5 +1,6 @@
 function RESULTS = nipals(X, prepro, a, it, tol)
 
+%%
 % This function requires the function scaledata.m available at:
 % http://www.mathworks.com/matlabcentral/fileexchange/15561-data-scaling
 %
@@ -43,7 +44,7 @@ function RESULTS = nipals(X, prepro, a, it, tol)
 set(0,'DefaultFigureWindowStyle','docked');
 
 ExistTable = istable(X);
-
+[a,LargeX] = max(std(X));
 if ExistTable==1
     TABLE = X;
     X = table2array(X);
