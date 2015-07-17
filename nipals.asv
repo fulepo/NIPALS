@@ -69,6 +69,9 @@ run('nipals_prepro.m')
 RESULTS = nipals_decomp(Z,rows, cols, a, it, tol, LargeX);
 RESULTS.OriginalData = OriginalData;
 
+if prepro==0
+    RESULTS.X_R
+
     run('nipals_figures.m')
 
 

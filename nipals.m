@@ -69,6 +69,14 @@ run('nipals_prepro.m')
 RESULTS = nipals_decomp(Z,rows, cols, a, it, tol, LargeX);
 RESULTS.OriginalData = OriginalData;
 
+if prepro==0
+    RESULTS.X_Raw = X;
+elseif prepro==1
+    RESULTS.X_Centered = X;
+elseif prepro==2
+    RESULTS.X_Autoscaled = X;
+end
+
     run('nipals_figures.m')
 
 
