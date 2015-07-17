@@ -4,11 +4,14 @@ function RESULTS = nipals(X, prepro, a, it, tol)
 % This function requires the function scaledata.m available at:
 % http://www.mathworks.com/matlabcentral/fileexchange/15561-data-scaling
 %
+%  This function requires the function convert2table.m available at:
+% http://www.mathworks.com/matlabcentral/fileexchange/52170-convert2table
+%
 % Written by: Filippo Amato July 2015
 % 
 %   RESULTS = nipals(X, prepro, a, it, tol)
 %   
-%   X = data matrix (TABLE)
+%   X = data matrix (if it is not a TABLE it will be converted)
 %   prepro = type of matrix preprocessing (see below)
 %   a = number of components
 %   it = maximum number of iterations for one component
@@ -44,8 +47,12 @@ function RESULTS = nipals(X, prepro, a, it, tol)
 set(0,'DefaultFigureWindowStyle','docked');
 
 ExistTable = istable(X);
-[a,LargeX] = max(std(X));
 if ExistTable==1
+    TABLE = X;
+    X = table2array(X);
+    [a,LargeX] = max(std(X));
+elseif ExistTable ==0
+    X = convert2table(X);
     TABLE = X;
     X = table2array(X);
     [a,LargeX] = max(std(X));
@@ -59,17 +66,8 @@ run('nipals_prepro.m')
     
 RESULTS = nipals_decomp(Z,rows, cols, a, it, tol, LargeX);
 
-if ExistTable == 1
     run('nipals_figures.m')
-elseif ExistTable == 0
-    run('nipals_figures_no_labels.m')
-end
 
-if ExistTable==0
-    disp('Please, submit data in TABLE format.');
-    disp('Computation will be done but labels');
-    disp('   on plots will not be visualized');
-end
 
 
 
