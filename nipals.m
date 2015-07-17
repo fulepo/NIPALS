@@ -49,10 +49,12 @@ set(0,'DefaultFigureWindowStyle','docked');
 ExistTable = istable(X);
 if ExistTable==1
     TABLE = X;
+    OriginalData = X;
     X = table2array(X);
     [a,LargeX] = max(std(X));
 elseif ExistTable ==0
     X = convert2table(X);
+    OriginalData = X;
     TABLE = X;
     X = table2array(X);
     [a,LargeX] = max(std(X));
@@ -65,6 +67,7 @@ run('nipals_conditions.m')
 run('nipals_prepro.m')
     
 RESULTS = nipals_decomp(Z,rows, cols, a, it, tol, LargeX);
+RESULTS.OriginalData = OriginalData;
 
     run('nipals_figures.m')
 
