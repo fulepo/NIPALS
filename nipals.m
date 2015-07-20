@@ -70,11 +70,11 @@ RESULTS = nipals_decomp(Z,rows, cols, a, it, tol, LargeX);
 RESULTS.OriginalData = OriginalData;
 
 if prepro==0
-    RESULTS.X_Raw = X;
+    RESULTS.X_Raw = Z;
 elseif prepro==1
-    RESULTS.X_Centered = X;
+    RESULTS.X_Centered = Z;
 elseif prepro==2
-    RESULTS.X_Autoscaled = X;
+    RESULTS.X_Autoscaled = Z;
 end
 
     run('nipals_figures.m')
